@@ -1,0 +1,15 @@
+{
+"name": "knut-tech",
+    "version": "0.0.1",
+    "description": "knut md website",
+    "main": "index.js",
+    "scripts": {
+      "start": "pm2 start index.js --deep-monitoring --attach --name crazy",
+      "stop": "pm2 stop crazy",
+     "restart": "pm2 restart prabath"
+    },
+  "dependencies": {
+    "express": "^4.18.1",
+    "path": "^0.12.7"
+   }
+}
