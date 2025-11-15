@@ -10,16 +10,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 console.log(`Les fichiers public sont servis...`);
 
 
-// Ajoute ça dans ton index.js, avant le app.get('*')
-app.get('/knutv1', (req, res) => {
-  res.download(path.join(__dirname, 'knutv1.tar.gz'), 'KnutMD-v1.tar.gz');
-});
-app.get('/knutv2', (req, res) => {
-  res.download(path.join(__dirname, 'knutv2.tar.gz'), 'KnutMD-v2.tar.gz');
-});
-app.get('/knutv3', (req, res) => {
-  res.download(path.join(__dirname, 'knutv3.tar.gz'), 'KnutMD-v3.tar.gz');
-});
 // Servir ton index.html qui est en arrière (../)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html')); // 🔥 ON LE MET DANS LE MÊME DOSSIER QUE index.js
