@@ -6,7 +6,7 @@ setTimeout(() => {
     loader.style.opacity = '0';
     setTimeout(() => loader.remove(), 1000);
   }
-}, 4000);  // Exact 4s display
+}, 2000);  // Exact 4s display
 
 
 
